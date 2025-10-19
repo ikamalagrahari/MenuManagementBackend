@@ -97,19 +97,29 @@ A Node.js backend API for managing menu items, organized into categories and sub
 
 ## Deployment
 
+### Backend (API)
+- **Live API**: https://menu-management-backend-one.vercel.app
+- **GitHub**: https://github.com/ikamalagrahari/MenuManagementBackend
+
+### Frontend (React App)
+- **Live Frontend**: [Deployed on Vercel - URL will be provided after deployment]
+- **Features**: Complete menu management interface with search, create, and view functionality
+
 ### Local Development
 1. Clone the repository
-2. Install dependencies: `npm install`
-3. Create `.env` file with MongoDB URI
-4. Run locally: `npm start` or `npm run dev`
+2. Install backend dependencies: `npm install`
+3. Install frontend dependencies: `cd frontend && npm install`
+4. Create `.env` file with MongoDB URI
+5. Run backend: `npm start`
+6. Run frontend: `cd frontend && npm start`
 
 ### Vercel Deployment
 1. Push code to GitHub
 2. Connect repository to Vercel
 3. Set environment variables in Vercel:
    - `MONGODB_URI`: Your MongoDB connection string
-   - `PORT`: 3000 (optional, Vercel sets automatically)
-4. Deploy
+   - `PORT`: Leave as default
+4. Deploy both backend and frontend
 
 ## Testing with Postman
 
@@ -198,7 +208,6 @@ I chose MongoDB because it's a NoSQL database that works well with Node.js and p
 Setting up the proper relationships between categories, subcategories, and items, especially handling the inheritance of tax settings from categories to subcategories.
 
 **What you would have done differently given more time?**
-- Add authentication and authorization
 - Implement pagination for large datasets
 - Add comprehensive input validation with libraries like Joi
 - Create unit tests with Jest
