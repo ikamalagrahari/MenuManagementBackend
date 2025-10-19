@@ -15,12 +15,12 @@ app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/menuManagement', {
-  serverSelectionTimeoutMS: 10000,
+  serverSelectionTimeoutMS: 30000, // 30 seconds
   socketTimeoutMS: 45000,
   maxPoolSize: 10,
-  serverSelectionTimeoutMS: 5000,
-  socketTimeoutMS: 45000,
-  family: 4
+  family: 4,
+  retryWrites: true,
+  retryReads: true
 })
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
