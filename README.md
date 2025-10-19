@@ -176,7 +176,6 @@ I chose MongoDB Atlas because it's a NoSQL database that provides flexible schem
 Setting up the MongoDB connection for Vercel deployment was the most challenging. Serverless functions have strict timeout limits and connection pooling requirements that differ from traditional server deployments. Configuring the connection options and handling the buffering timeout issues required multiple iterations.
 
 **What you would have done differently given more time?**
-- Add authentication and authorization using JWT tokens
 - Implement comprehensive input validation with libraries like Joi
 - Add pagination for large datasets and implement caching for better performance
 - Create unit tests with Jest and integration tests
