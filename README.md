@@ -122,7 +122,7 @@ Use the base URL: `http://localhost:3000` for local or your Vercel URL for produ
 POST /api/categories
 {
   "name": "Beverages",
-  "image": "https://example.com/beverages.jpg",
+  "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400",
   "description": "Drinks and beverages",
   "taxApplicability": true,
   "tax": 5,
@@ -135,7 +135,7 @@ POST /api/categories
 POST /api/subcategories
 {
   "name": "Hot Drinks",
-  "image": "https://example.com/hotdrinks.jpg",
+  "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400",
   "description": "Coffee and tea",
   "categoryId": "category_id_here"
 }
@@ -146,7 +146,7 @@ POST /api/subcategories
 POST /api/items
 {
   "name": "Coffee",
-  "image": "https://example.com/coffee.jpg",
+  "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400",
   "description": "Hot coffee",
   "taxApplicability": true,
   "tax": 5,
