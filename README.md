@@ -182,7 +182,7 @@ npm run start-frontend
 - **GitHub**: https://github.com/ikamalagrahari/MenuManagementBackend
 
 ### Frontend (React App)
-- **Live Frontend**: [Deployed on Vercel - URL will be provided after deployment]
+- **Live Frontend**: https://frontend-bmgccgixn-kamal-agraharis-projects.vercel.app
 - **Features**: Complete menu management interface with search, create, and view functionality
 
 ### Local Development
