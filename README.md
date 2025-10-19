@@ -165,6 +165,29 @@ GET /api/items/search/Coffee
 ## Questions & Answers
 
 **Which database you have chosen and why?**
+I chose MongoDB Atlas because it's a NoSQL database that provides flexible schema design for menu items with varying attributes. It's also cloud-hosted, scalable, and works well with Node.js applications deployed on serverless platforms like Vercel.
+
+**3 things that you learned from this assignment?**
+1. Building RESTful APIs with proper validation and error handling using Express.js
+2. Working with Mongoose ODM for MongoDB schema design and managing relationships between collections
+3. Implementing hierarchical data structures and understanding the challenges of serverless deployment with database connections
+
+**What was the most difficult part of the assignment?**
+Setting up the MongoDB connection for Vercel deployment was the most challenging. Serverless functions have strict timeout limits and connection pooling requirements that differ from traditional server deployments. Configuring the connection options and handling the buffering timeout issues required multiple iterations.
+
+**What you would have done differently given more time?**
+- Add authentication and authorization using JWT tokens
+- Implement comprehensive input validation with libraries like Joi
+- Add pagination for large datasets and implement caching for better performance
+- Create unit tests with Jest and integration tests
+- Add API documentation with Swagger/OpenAPI
+- Implement rate limiting and request logging middleware
+- Add image upload functionality instead of just URLs
+- Create a frontend interface to demonstrate the API
+
+## Questions & Answers
+
+**Which database you have chosen and why?**
 I chose MongoDB because it's a NoSQL database that works well with Node.js and provides flexible schema design for menu items with varying attributes.
 
 **3 things that you learned from this assignment?**
