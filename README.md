@@ -1,42 +1,122 @@
-# Menu Management Backend
+# Menu Management System
 
-A Node.js backend API for managing menu items, organized into categories and subcategories.
+A full-stack web application for managing restaurant menu items, organized into categories and subcategories. Features both a REST API backend and a modern React frontend interface.
 
 ## Features
 
+### Backend API
 - **Categories**: Create, read, update categories with tax information
 - **Subcategories**: Create subcategories under categories with inherited tax settings
 - **Items**: Create items under categories or subcategories with pricing and tax calculations
-- **Search**: Search items by name
+- **Search**: Search items by name with real-time results
 - **RESTful API**: Full CRUD operations for all entities
+- **MongoDB Atlas**: Cloud-hosted database with automatic scaling
+
+### Frontend Interface
+- **Modern React UI**: Beautiful, responsive interface built with React
+- **Real-time Search**: Instant search functionality across menu items
+- **Interactive Forms**: Create new categories, subcategories, and items
+- **Tabbed Navigation**: Organized views for different data types
+- **Mobile Responsive**: Works perfectly on all device sizes
+- **Live API Integration**: Connected to production backend
 
 ## Tech Stack
 
+### Backend
 - **Node.js** with **Express.js**
-- **MongoDB** with **Mongoose** ODM
+- **MongoDB Atlas** with **Mongoose** ODM
 - **CORS** for cross-origin requests
 - **Dotenv** for environment variables
 
-## Installation
+### Frontend
+- **React** with modern hooks
+- **Axios** for API communication
+- **CSS3** with responsive design
+- **Create React App** for development
 
-1. Clone the repository
-2. Install dependencies:
+## Project Structure
+
+```
+MenuManagementSystem/
+├── backend/                    # Node.js API server
+│   ├── models/                # MongoDB schemas
+│   │   ├── Category.js
+│   │   ├── Subcategory.js
+│   │   └── Item.js
+│   ├── routes/                # API route handlers
+│   │   ├── categoryRoutes.js
+│   │   ├── subcategoryRoutes.js
+│   │   └── itemRoutes.js
+│   ├── middleware/            # Custom middleware
+│   │   └── validation.js
+│   ├── server.js              # Main server file
+│   ├── seed.js                # Database seeder
+│   ├── vercel.json            # Vercel deployment config
+│   └── package.json
+├── frontend/                  # React application
+│   ├── src/
+│   │   ├── App.js            # Main React component
+│   │   ├── App.css           # Styling
+│   │   └── index.js
+│   ├── public/               # Static assets
+│   └── package.json
+├── .gitignore
+├── README.md                 # This file
+└── package.json             # Root package.json
+```
+
+## Installation & Setup
+
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB Atlas account (or local MongoDB)
+- Git
+
+### Quick Setup
+1. **Clone the repository**
    ```bash
-   npm install
+   git clone https://github.com/ikamalagrahari/MenuManagementBackend.git
+   cd MenuManagementBackend
    ```
-3. Create a `.env` file with your MongoDB connection string:
-   ```
-   MONGODB_URI=mongodb://localhost:27017/menuManagement
-   PORT=3000
-   ```
-4. Start the server:
+
+2. **Install all dependencies**
    ```bash
-   npm start
+   npm run install-all
    ```
-   Or for development with auto-reload:
+
+3. **Environment Setup**
+   - Copy `.env` file to `backend/` directory
+   - Update MongoDB URI in `backend/.env`:
+     ```
+     MONGODB_URI=mongodb+srv://your-username:your-password@your-cluster.mongodb.net/menuManagement
+     PORT=3000
+     ```
+
+4. **Seed the database** (optional)
    ```bash
-   npm run dev
+   npm run seed
    ```
+
+### Running the Application
+
+**Development Mode:**
+```bash
+# Terminal 1: Start Backend
+npm run dev-backend
+
+# Terminal 2: Start Frontend
+npm run start-frontend
+```
+
+**Production Mode:**
+```bash
+# Backend
+npm run start-backend
+
+# Frontend (after building)
+npm run build-frontend
+npm run start-frontend
+```
 
 ## API Endpoints
 
